@@ -27,12 +27,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // create and open file, show error if it didnt work
-    FILE *fptr;
-    fptr = fopen("matrix.txt", "w");
-    if (fptr == NULL) {
-        printf("Error opening file");
-    }
 
     //  create dynamically allocated matrix array
     int **matrix = (int **)malloc(row * sizeof(int *));
@@ -43,6 +37,12 @@ int main(int argc, char *argv[]) {
         }
     }
     
+    // create and open file, show error if it didnt work
+    FILE *fptr;
+    fptr = fopen("matrix.txt", "w");
+    if (fptr == NULL) {
+        printf("Error opening file");
+    }
 
 
     // add matrix into file with whitespaces, new lines and carriage return and close
