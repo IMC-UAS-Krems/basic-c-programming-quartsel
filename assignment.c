@@ -17,8 +17,10 @@ int main(int argc, char *argv[]) {
     }
 
     // convert arguments to int
-    int row = atoi(argv[1]);
-    int col = atoi(argv[2]);
+    int row;
+    int col;
+    row = atoi(argv[1]);
+    col = atoi(argv[2]);
 
 
     // check if they are positive
