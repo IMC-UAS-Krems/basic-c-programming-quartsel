@@ -6,12 +6,10 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
-    // initialize random number generator
     srand(time(NULL));
     int minrand = 1;
     int maxrand = 100;
 
-    // WRITE YOUR CODE HERE
     // check for two arguments, return error if incorrect
     if (argc != 3) {
         printf("Incorrect usage. You provided %d arguments. The correct number of arguments is 2", argc-1);
@@ -68,5 +66,5 @@ int main(int argc, char *argv[]) {
     }
     free(matrix);
 
-    return 0;
+return 0;
 }
