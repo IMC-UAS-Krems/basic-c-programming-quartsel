@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 
 
     // check if they are positive
-    if (row < 0 || col < 0) {
+    if (row <= 0 || col <= 0) {
         printf("Incorrect usage. The parameters you provided are not positive integers");
         return 1;
     }
