@@ -17,10 +17,8 @@ int main(int argc, char *argv[]) {
     }
 
     // convert arguments to int
-    int row;
-    int col;
-    row = atoi(argv[1]);
-    col = atoi(argv[2]);
+    int row = atoi(argv[1]);
+    int col = atoi(argv[2]);
 
 
     // check if they are positive
@@ -28,7 +26,6 @@ int main(int argc, char *argv[]) {
         printf("Incorrect usage. The parameters you provided are not positive integers");
         return 1;
     }
-
 
     //  create dynamically allocated matrix array
     int **matrix = (int **)malloc(row * sizeof(int *));
@@ -50,7 +47,7 @@ int main(int argc, char *argv[]) {
     // add matrix into file with whitespaces, new lines and carriage return and close
     for (int i = 0; i < row; i++) {
         for (int j = 0; j < col; j++) {
-            fprintf(fptr, "%d ", matrix[i][j]);
+            fprintf(fptr, "%d", matrix[i][j]);
             if (j < col - 1) {
                 fprintf(fptr, " ");
             }
